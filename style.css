@@ -88,6 +88,9 @@ section{
     line-height: 1.3;
 
 }
+.home-content h1 span{
+    color: var(--text-color);
+}
 .home-content .text-animated{
     position: relative;
     width:32.8rem ;
