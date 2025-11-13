@@ -14,8 +14,10 @@
   <body>
     <!---header section-->
     <header class="header">
-      <a href="#" class="logo">Kajal Rajak.</a>
-      <div class="bx bx-menu" id="menu-icon"></div>
+      <a href="#" class="logo">Kajal Rajak.<span class="animate" style="--i:1;"></span></a>
+      <div class="bx bx-menu" id="menu-icon">
+         <span class="animate" style="--i:2;"></span>
+      </div>
       <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#education">Education</a>
@@ -23,24 +25,32 @@
         <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
+        <span class="active-nav"></span>
+        <span class="animate" style="--i:2;"></span>
       </nav>
     </header>
     <!---home section design-->
-    <section class="home" id="home">
+    <section class="home show-animate" id="home">
       <div class="home-content">
-        <h1>Hi, I'm<span> Kajal Rajak</span></h1>
+        <h1>Hi, I'm<span> Kajal Rajak</span>
+         <span class="animate" style="--i:2;"></span></h1>
         <div class="text-animated">
           <h3>Frontend Developer</h3>
+           <span class="animate" style="--i:3;"></span>
         </div>
         <p>
           Hi, I’m Kajal Rajak, a dedicated frontend developer who loves turning
           ideas into interactive websites. Skilled in HTML, CSS, JavaScript,
           React.js, and SQL, I’m currently expanding my knowledge in full-stack
-          development
+          development.
+           <span class="animate" style="--i:4;"></span>
+
         </p>
         <div class="btn-box">
             <a href="#" class="btn">Hire Me</a>
             <a href="#" class="btn">Let’s Connect</a>
+           <span class="animate" style="--i:5;"></span>
+
         </div>
 
       </div>
@@ -49,8 +59,12 @@
         <a href="#"><i class='bx bxl-linkedin' ></i></a>
         <a href="#"><i class='bx bxl-github' ></i></a>
         <a href="#"><i class='bx bxl-twitter'></i></a>
+           <span class="animate" style="--i:6;"></span>
+
  </div>
  <div class="home-imgHover"></div>
+           <span class="animate home-img" style="--i:7;"></span>
+
     </section>
   
 <!--education part-->
@@ -103,14 +117,17 @@
 
     <!-- ===== Experience Column ===== -->
     <div class="education-column">
-      <h3 class="title">Experience</h3>
+      <h3 class="title">Certificate</h3>
 
       <div class="education-box">
         <div class="education-content">
           <div class="content">
             <div class="year"><i class='bx bxs-calendar'></i> 2024 - 2025</div>
-            <h3>Web Developer</h3>
-            <p>Worked on building responsive and interactive web applications using HTML, CSS, JavaScript, and modern UI designs. Developed multiple user-friendly projects and improved frontend development skills.</p>
+            <h3>Web Developer-Intern — Cognifyz Technologies</h3>
+            <p> I completed a one-month web development internship at Cognifyz Technologies, where I worked on various projects using HTML, CSS, and JavaScript. During this internship, I developed interactive and responsive websites, enhancing my skills in front-end design and functionality.
+               <a href="https://drive.google.com/file/d/1LL5MnS5Gq7xESBCCTYh9LRJfDA2lbAq9/view?usp=sharing" >Certificate</a>
+            </p>
+         
           </div>
         </div>
       </div>
@@ -119,8 +136,10 @@
         <div class="education-content">
           <div class="content">
             <div class="year"><i class='bx bxs-calendar'></i> 2024 - 2025</div>
-            <h3>Web Developer</h3>
-            <p>Worked on building responsive and interactive web applications using HTML, CSS, JavaScript, and modern UI designs. Developed multiple user-friendly projects and improved frontend development skills.</p>
+            <h3>Java Programming Fundamentals</h3>
+            <p>I engaged a Java Fundamentals training program, where I worked on various concepts using core Java. During this training, I learned to write efficient programs and developed a strong understanding of OOPs concepts, loops, classes, and exception handling, enhancing my programming. 
+             <a href=" https://drive.google.com/file/d/1GWVOVvO8nvysxO0umhkmIk0pajMe9IEW/view?usp=sharing">Certificate</a>
+            </p>
           </div>
         </div>
       </div>
@@ -128,8 +147,8 @@
         <div class="education-content">
           <div class="content">
             <div class="year"><i class='bx bxs-calendar'></i> 2024 - 2025</div>
-            <h3>Web Developer</h3>
-            <p>Worked on building responsive and interactive web applications using HTML, CSS, JavaScript, and modern UI designs. Developed multiple user-friendly projects and improved frontend development skills.</p>
+            <h3>Software Developer</h3>
+            <p>I successfully undertook a Software Developer training program, where I worked on various projects using Java, HTML, CSS, and JavaScript. During this training, I developed responsive and functional applications, strengthening my understanding of software development concepts, coding practices, and problem-solving skills</p>
           </div>
         </div>
       </div>
@@ -197,7 +216,9 @@
 
   <!--about section design-->
    <section class="about" id="about">
-  <h2 class="heading">About <span>Me</span></h2>
+  <h2 class="heading">About <span>Me</span><span class="animate scroll" style="--i:1;"></span>
+           <span class="animate" style="--i:1;"></span>
+  </h2>
 
   <div class="about-img">
     <img src="/about.jpg" alt="photo">
@@ -269,6 +290,6 @@
   </div>
 
 </footer>
-    
+    <script src="/jacascript.js"></script>
   </body>
 </html>
