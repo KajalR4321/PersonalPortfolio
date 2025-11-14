@@ -275,8 +275,8 @@ span{
 }
 .about-img{
     position: relative;
-    width: 25rem;
-    height:25rem ;
+    width: 29rem;
+    height:29rem ;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -309,11 +309,15 @@ span{
     text-align: center;
 }
 .about-content h3{
-    font-size:2.6rem ;
+    position: relative;
+    display: inline-block;
+    font-size:3.2rem ;
 }
 .about-content p{
+    position: relative;
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 }
 .btn-box.btns{
     display:inline-block;
@@ -321,7 +325,9 @@ span{
 }
 .btn-box.btns a::before{
     background: var(--second-bg-color);
+
 }
+
 /* education part*/
 
 .education {
@@ -554,6 +560,35 @@ max-width: 75%;
  .skills-column:nth-child(3) .skills-content .progress:nth-child(4) .bar span{
 max-width: 75%;
  }
+ /*project part*/
+/* Project Section */
+#project {
+    padding: 30px 0;
+}
+
+/* Project Cards Grid */
+.Project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+/* Each Project Card */
+.Project-list div {
+    background: var(--main-color);
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;      /* FIXED: corrected border */
+    transition: transform .3s ease;  /* nice hover effect */
+}
+
+/* Hover Effect */
+.Project-list div:hover {
+    transform: translateY(-10px);
+}
+
 /* contact part*/
 .contact{
     min-height: auto;
@@ -682,7 +717,7 @@ font-size: 1.6rem;
     right: 0;
     width: 100%;
     height: 100%;
-    background: violet;
+    background: var(--bg-color);
     z-index: 98;
 
 }
@@ -694,19 +729,21 @@ font-size: 1.6rem;
  #menu-icon .animate,
  .home.show-animate .animate{
     animation: showRight 1s ease forwards;
-    animation-delay:calc(.3s + var(--i));
+    animation-delay:calc(.3s * var(--i));
 
 }
-.animate.scroll{
-    transition: 1s ease;
-    transition-delay:calc(.3s / var(--i)) ;
+/* .animate.scroll{
+   
+    transition:  1s ease;
+    transition-delay: calc(.3s / var(--i));
     animation: none;
 }
-.about.show-animate .animate.scroll{
-    transition-delay:calc(.3s + var(--i)) ;
-    width: 0;
 
-}
+.about.show-animate .animate.scroll{
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+} */
+
 /* media query for responsive*/
 @media (max-width:1200px){
     html{
