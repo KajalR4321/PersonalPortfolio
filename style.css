@@ -585,147 +585,129 @@ max-width: 75%;
  }
  /*project part*/
 
-/* #project {
-    padding: 30px 0;
-     max-width: 1100px;     /* limit width */
-    /* margin: 0 auto;   
-
-}
-.pro{
-    position: relative;
-    font-size: 7rem;
-    margin-top: 3rem;
-    text-align: center;
-}
-span{
-    color:var(--main-color) ;
-
-}
-
-/* Project Cards Grid */
-/* .Project-list {
-    display: grid; */
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-
-} */
 
 /*Each Project Card */
- .Project-list div {
-    position: relative;
-    background: var(--second-bg-color);
-    
-    border-radius: 10px;      /* FIXED: corrected border */
-     width: 100%;
-    max-width: 300px; 
-       overflow: hidden; 
-         z-index: 1;
-    transition: transform .3s ease;  /* nice hover effect */
-} 
-
-
-
-
-/* Project Section */
-.project {
-    padding: 60px 0;
-    text-align: center;
+ .center-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
 }
-.project .container {
-    max-width: 1000px;     /* full page width ko limit karega */
-    margin: 0 auto;        /* center align */
+.center-box:hover {
+  gap: 60px;
 }
 
-.project .pro {
-    font-size: 5rem;
-    margin-bottom: 30px;
+
+.card {
+  width: 370px;
+  height: 430px;
+  background: rgb(103, 225, 255);
+  transition: all 0.4s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  font-size: 30px;
+  font-weight: 900;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 70px;
+}
+
+
+.card:hover {
+  border-radius: 15px;
+  cursor: pointer;
+  transform: scale(1.2);
+  box-shadow: 0px 0px 10px 5px  rgba(0, 0, 0, 0.705);
+  background:rgb(103, 225, 255) ;
+  gap: 50px;
+}
+
+.first-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;   /* ← IMPORTANT */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+  opacity: 1;
+}
+
+.first-content img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;     /* Fill card without stretching */
+ border-radius: 15px;   /*Match card corners */
+}
+
+.card:hover .first-content {
+  height: 0px;
+  opacity: 0;
+}
+
+.second-content {
+  position: absolute;
+   top: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  opacity: 0;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  transition: all 0.4s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+
+}
+.second-content .text-box {
+  display: flex;
+  flex-direction: column;  /* h2 → p → link vertically */
+  align-items: center;
+  gap: 10px;              /* space between h2, p, link */
+  padding: 20px;
+  color: #ffffff;
+}
+
+.second-content h2 {
+  font-size: 1.5rem;
     font-weight: 700;
+    color: black;
+  margin-bottom: 2rem;
+ text-align: center;
 }
 
-/* Project Grid */
-.Project-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 1fr));
-    gap: 35px;
-    padding: 35px 15px;
-   justify-items: center;   
-    /* row-gap: 45px;     /* <-- Height-wise gap only */
-    /* column-gap: 20px; */
-    margin-top: 2rem; 
+.second-content p {
+ font-size: 1rem;
+  max-width: 240px;        /* keeps paragraph neat */
+  line-height: 1.4;
+   text-align: center;
+   margin-bottom: 1.2rem;
+}
+.second-content a {
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
-/* Each Project Card */
-.project-design {
-    background: var(--bg-color);
-    border: 2px solid var(--main-color);
-    border-radius: 15px;
-    padding: 30px 20px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    transition: .4s ease;
+.card:hover .second-content {
+  opacity: 1;
+  height: 100%;
+  font-size: 1.8rem;
+  transform: rotate(0deg);
 }
 
-/* Background hover fill effect */
-.project-design::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    background: var(--main-color);
-    z-index: -1;
-    transition: .4s ease;
-}
 
-.project-design:hover::before {
-    width: 100%;
-}
-
-/* Heading */
-.project-design h2 {
-    font-size: 2.4rem;
-    font-weight: 600;
-    margin-bottom: 10px;
-    transition: .3s ease;
-}
-
-/* Paragraph */
-.project-design p {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    line-height: 1.6;
-    color: var(--text-color);
-    transition: .3s ease;
-}
-
-/* Button */
-.project-design a {
-    display: inline-block;
-    padding: 10px 20px;
-    background: gray;
-    color: var(--text-color);
-    border-radius: 8px;
-    font-size: 1.6rem;
-    text-decoration: none;
-    transition: .3s ease;
-    border: 1px solid transparent;
-}
-
-.project-design:hover a {
-    background: transparent;
-    border-color: #fff;
-    color: #fff;
-}
-
-/* On Hover — Text Color Change */
-.project-design:hover h2,
-.project-design:hover p,
-.project-design:hover a {
-    color: #fff;
-}
 
 
 
